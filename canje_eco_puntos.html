@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - EcoCycle</title>
+    <link rel="stylesheet" href="CSS/US04-1.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <style>
+        .img-container {
+            position: relative; 
+        }
+
+        .price-tag {
+            position: absolute;
+            top: 10px; 
+            left: 10px; 
+            background-color: #AFF4C6;
+            color: #14AE5C;
+            padding: 5px 10px; 
+            border-radius: 5px;
+            font-size: 1rem; 
+            font-weight: bold; 
+            z-index: 10; 
+        }
+
+        .img-container {
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        #tipoMaterialWrapper {
+            position: relative;
+        }
+
+        #selectedTags {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .remove-tag {
+            margin-left: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .remove-tag:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body class="fondo_verde">
+    <script>
+        let activo = JSON.parse(localStorage.getItem("activo")) || false;
+        if(activo==false){
+            window.location.href = "US03-1.html";
+        }
+    </script>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="Imagenes/ecocycle.png" alt="" class="img-fluid logo">
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="US02.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Reciclaje
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="US08.html">Depositos</a></li>
+                            <li><a class="dropdown-item" href="US11-1.html">Consejos</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="US14.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="US21.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="img-fluid img_user" src="Imagenes/fotoperfil.jpeg" alt="">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="US04-1.html">Mi perfil</a></li>
+                            <li><a class="dropdown-item" href="canje_eco_puntos.html">Canje de Eco-Puntos</a></li>
+                            <li><a class="dropdown-item" href="historial_puntos.html">Historial Eco-Puntos</a></li>
+                            <li><a class="dropdown-item" id="cerrarsesion" href="US03-1.html">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="mb-4 titulo_acerca text-center mt-3 d-flex align-items-center justify-content-center" style="height: 150px;">
+            Canje de Eco-Puntos
+        </h2>
+        <div style="background-color: #122A10; color:white;display: inline;padding: 10px;">Total de Eco-Puntos: 00</div>
+        <div class="mb-4 titulo_acerca text-start mt-3" style="color:black; background-color: white;font-size: 25px;">¡CANJEA TUS ECO-PUNTOS!</div>
+    </div>
+    
+
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Producto 1 -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card h-100 d-flex flex-column position-relative">
+                    <div class="img-container position-relative">
+                        <img src="Imagenes/cepillodiente.webp" class="card-img-top" alt="Producto 1">
+                        <div class="price-tag">
+                            400 P
+                        </div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="card-text flex-grow-1">Cepillo de diente de bambú</p>
+                        <button class="btn btn-primary canjear-btn" onclick="canjear(this)">Canjear</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Producto 2 -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card h-100 d-flex flex-column">
+                    <div class="img-container">
+                        <img src="Imagenes/bolsareutilizable.jpg" class="card-img-top" alt="Producto 2">
+                        <div class="price-tag">
+                            600 P
+                        </div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="card-text flex-grow-1">Bolsa reutilizable</p>
+                        <button class="btn btn-primary canjear-btn" onclick="canjear(this)">Canjear</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Producto 3 -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card h-100 d-flex flex-column">
+                    <div class="img-container">
+                        <img src="Imagenes/caja.jpg" class="card-img-top" alt="Producto 3">
+                        <div class="price-tag">
+                            1000 P
+                        </div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="card-text flex-grow-1">Caja reutilizable</p>
+                        <button class="btn btn-primary canjear-btn" onclick="canjear(this)">Canjear</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card h-100 d-flex flex-column">
+                    <div class="img-container">
+                        <img src="Imagenes/utensilioreutilzable.webp" class="card-img-top" alt="Producto 4">
+                        <div class="price-tag">
+                            600 P
+                        </div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="card-text flex-grow-1">Utensilios reutilizables</p>
+                        <button class="btn btn-primary canjear-btn" onclick="canjear(this)">Canjear</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card h-100 d-flex flex-column">
+                    <div class="img-container">
+                        <img src="Imagenes/contenedorereciclaje.jpg" class="card-img-top" alt="Producto 4">
+                        <div class="price-tag">
+                            800 P
+                        </div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="card-text flex-grow-1">Contenedor reciclaje</p>
+                        <button class="btn btn-primary canjear-btn" onclick="canjear(this)">Canjear</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card h-100 d-flex flex-column">
+                    <div class="img-container">
+                        <img src="Imagenes/utensilioreutilzable.webp" class="card-img-top" alt="Producto 4">
+                        <div class="price-tag">
+                            2000 P
+                        </div>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="card-text flex-grow-1">Utensilios reutilizables</p>
+                        <button class="btn btn-primary canjear-btn" onclick="canjear(this)">Canjear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div class="row mt-4">
+            <div class="col">
+                <section class="reportesSection">
+                    <div class="reportesHistorial mb-4">
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h2 class="text-center titulo_fondo_verde">¿Como ganar Eco-Puntos?</h2>
+                            </div>
+
+                            <div class="col-md-6"> </div>
+                            <div class="col-md-6">
+                                <div class="reporte  rounded p-3 mb-3">
+                                    <div class="img-container">
+                                        <img src="Imagenes/registradeposito.jpeg" class="img-fluid" alt="Depósito de material reciclable">
+                                    </div>
+                                    <p>Por cada depósito de material reciclable en unos de nuestro contenedores ganarás 20 P.</p>
+                                    <button type="submit" class="btn btn-crearcuenta w-100" id="btnIngresar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Registra tus depósitos</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="reporte  rounded p-3 mb-3">
+                                    <div class="img-container">
+                                        <img src="Imagenes/registradepo.avif" class="img-fluid" alt="Módulo educativo de reciclaje">
+                                    </div>
+                                    <p>Por completar 1 módulo educativo de reciclaje, sostenibilidad y educación ambiental ganarás automáticamente 30 P.</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+    </div>
+
+    
+    
+
+
+    <footer class="footer mt-auto py-3 text-light">
+        <div class="d-flex justify-content-center mb-4">
+            <div class="col-auto">
+                <img src="Imagenes/ecocycle.png" alt="EcoCycle Logo" class="img-fluid img-thumbnail">
+            </div>
+        </div>
+    
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Sobre EcoCycle</h6>
+                    <p>EcoCycle es una plataforma dedicada a promover el reciclaje responsable y brindar información clara y accesible para facilitar el manejo adecuado de residuos en Lima Metropolitana.</p>
+                    <a href="#" class="footer-link">Más sobre nosotros</a>
+                    <p class="h6 mt-2">© EcoCycle 2024. Todos los derechos reservados.</p>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Información Útil</h6>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Política de Privacidad</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Términos y Condiciones</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Libro de Reclamaciones</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Contáctanos</h6>
+                    <p>Dirección: Av. Guardia Civil Sur 875, Chorrillos, Lima</p>
+                    <p>Email: contacto@ecocycle.pe</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f text-light"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube text-light"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter text-light"></i></a>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Suscríbete</h6>
+                    <p>Recibe las mejores recomendaciones de reciclaje y consejos ambientales directamente en tu correo.</p>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Correo electrónico">
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Registrar Depósito</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="registroDepositoForm">
+                    <!-- Día -->
+                    <div class="mb-3">
+                        <label for="dia" class="form-label">Día</label>
+                        <input type="number" class="form-control" id="dia" min="1" max="31" placeholder="Ingrese el día" required>
+                    </div>
+
+                    <!-- Mes -->
+                    <div class="mb-3">
+                        <label for="mes" class="form-label">Mes</label>
+                        <select class="form-select" id="mes" required>
+                            <option value="" selected disabled>Seleccione el mes</option>
+                            <option value="1">Enero</option>
+                            <option value="2">Febrero</option>
+                            <option value="3">Marzo</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Mayo</option>
+                            <option value="6">Junio</option>
+                            <option value="7">Julio</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Septiembre</option>
+                            <option value="10">Octubre</option>
+                            <option value="11">Noviembre</option>
+                            <option value="12">Diciembre</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="anio" class="form-label">Año</label>
+                        <input type="number" class="form-control" id="anio" placeholder="Ingrese el año" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="hora" class="form-label">Hora</label>
+                        <input type="time" class="form-control" id="hora" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="direccion" value="Av. José Pardo 223, Miraflores" disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tipoMaterial" class="form-label">Tipo de Material</label>
+                        <div id="tipoMaterialWrapper">
+                            <select class="form-select" id="tipoMaterial" multiple onchange="actualizarSeleccion()">
+                                <option value="plastico">Plástico</option>
+                                <option value="vidrio">Vidrio</option>
+                                <option value="papel">Papel</option>
+                                <option value="metal">Metal</option>
+                            </select>
+                            <div id="selectedTags"></div> 
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="registrarDeposito">Registrar Depósito</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("cerrarsesion").addEventListener("click",function(){
+            localStorage.removeItem("activo");
+            localStorage.removeItem("user_activo");
+        });
+
+        document.getElementById("registrarDeposito").addEventListener("click",function(){
+            let user = JSON.parse(localStorage.getItem("user_activo"));
+            let puntos = JSON.parse(localStorage.getItem("puntos"));
+            for(let i=0; i< puntos.length; i++){
+                if(puntos[i].id==user.id){
+                    puntos[i].puntos = Number(puntos[i].puntos) +20;
+                    break;
+                }
+            }
+
+            localStorage.setItem("puntos",JSON.stringify(puntos))
+            const nuevo_deposito = {
+                id: user.id,
+                dia: document.getElementById("dia").value,
+                mes: document.getElementById("mes").value,
+                anio: document.getElementById("anio").value,
+                hora: document.getElementById("hora").value,
+                direccion: document.getElementById("direccion").value,
+                tipoMaterial:Array.from(document.getElementById("tipoMaterial").selectedOptions).map(option => option.value)
+            };
+
+            let depositos = JSON.parse(localStorage.getItem("depositos")) || [];
+            depositos.push(nuevo_deposito);
+            localStorage.setItem("depositos", JSON.stringify(depositos));
+            alert("Nuevo deposito registrado!!")
+
+            const modal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+            modal.hide();
+
+        });
+        
+
+        function actualizarSeleccion() {
+            const elementoSelect  = document.getElementById("tipoMaterial");
+            const selectedOptions = Array.from(elementoSelect.selectedOptions);
+            const contenedorEtiquetasSeleccionadas  = document.getElementById("selectedTags");
+
+            contenedorEtiquetasSeleccionadas .innerHTML = '';
+
+            selectedOptions.forEach(option => {
+                const etiqueta  = document.createElement('div');
+                etiqueta .classList.add('tag');
+                etiqueta .textContent = option.textContent;
+
+                const botonEliminar  = document.createElement('span');
+                botonEliminar .textContent = '×';
+                botonEliminar .classList.add('remove-tag');
+                botonEliminar .onclick = () => {
+                    option.selected = false; 
+                    actualizarSeleccion();
+                };
+
+                etiqueta .appendChild(botonEliminar );
+                contenedorEtiquetasSeleccionadas .appendChild(etiqueta );
+            });
+        }
+
+        function canjear(button) {
+            const etiquetaPrecio  = button.closest('.card').querySelector('.price-tag').textContent;
+            
+            const valorNumerico  = parseInt(etiquetaPrecio.replace(' P', ''));
+            let puntos = JSON.parse(localStorage.getItem("puntos"));
+            let user = JSON.parse(localStorage.getItem("user_activo"));
+            let encontrado=false;
+            for(let i=0; i<puntos.length; i++){
+                if(puntos[i].id=user.id){
+                    encontrado=true;
+
+                    if(valorNumerico<=Number(puntos[i].puntos)){
+                        puntos[i].puntos= Number(puntos[i].puntos)-valorNumerico;
+                        localStorage.setItem("puntos", JSON.stringify(puntos));
+                        alert("Canjeo sus puntos satisfactoriamente!!!")
+                    }else{
+                        alert("No cuenta con puntos suficientes");
+                    }
+                    break;
+                }
+            }
+
+            if(encontrado==false){
+                alert("No cuenta con puntos suficientes");
+            }
+        }
+    </script>
+</body>
+</html>

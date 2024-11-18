@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consejos - EcoCycle</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" href="CSS/US11-4.css">
+</head>
+<body>
+    <script>
+        let activo = JSON.parse(localStorage.getItem("activo")) || false;
+        if(activo==false){
+            window.location.href = "US03-1.html";
+        }
+    </script>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="Imagenes/ecocycle.png" alt="" class="img-fluid logo">
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="US02.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Reciclaje
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="US08.html">Depositos</a></li>
+                            <li><a class="dropdown-item" href="US11-1.html">Consejos</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="US14.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="US21.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="img-fluid img_user" src="Imagenes/fotoperfil.jpeg" alt="">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="US04-1.html">Mi perfil</a></li>
+                            <li><a class="dropdown-item" href="canje_eco_puntos.html">Canje de Eco-Puntos</a></li>
+                            <li><a class="dropdown-item" href="historial_puntos.html">Historial Eco-Puntos</a></li>
+                            <li><a class="dropdown-item" id="cerrarsesion" href="US03-1.html">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Consejos</h1>
+    </header>
+
+    <section class="Residuos">
+        <nav>
+            <ul>
+                <li><a href="US11-1.html">Residuos orgánicos</a></li>
+                <li><a href="US11-2.html">Residuos plásticos</a></li>
+                <li><a href="US11-3.html">Residuos metálicos</a></li>
+                <li><a href="US11-4.html" class="A">Electrónicos y baterías</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <main>
+        <section class="Info">
+            <h2>¿Como reciclar desde mi casa?</h2>
+
+            <img src="Imagenes/baterias.webp" alt="">
+
+            <p>
+                La gestión de pilas y baterías usadas resulta un problema ambiental complicado. Esto es debido a sus distintos componentes y el nivel de toxicidad de cada uno de ellos. 
+                <br><br>
+                Pero, ¿cómo nos podemos deshacer adecuadamente de estos residuos sin poner en riesgo nuestra salud ni generar impactos en el medio ambiente?
+            </p>
+        </section>
+
+        <section class="Consejos">
+            <h2>Información básica acerca del desecho de baterías</h2>
+
+            <div class="A">
+                <h3>Tipos de baterías</h3>
+
+                <h4><li>Baterías de un solo uso:</li></h4>
+                <p>
+                    Las baterías de un solo uso vienen en una variedad de tamaños, como celdas AA, AAA, 9V, C o D. Estos son el tipo más común de baterías que se pueden encontrar en controles remotos, juguetes para niños y dispositivos inalámbricos. 
+
+                    <br><br>
+
+                    Si bien estas baterías son lo suficientemente seguras como para desecharlas, es mejor no hacerlo. Las baterías de un solo uso que se tiran a la basura se llevan a un vertedero y solo contribuyen a la generación de desechos sólidos contaminantes.
+                </p>
+
+                <h4><li>Baterías recargables:</li></h4>
+                <p>
+                    Muchos aparatos electrónicos usan baterías recargables como los teléfonos celulares, cámaras digitales y computadoras portátiles. Hay diferentes tipos de baterías recargables que incluyen:
+                </p>
+                <div class="B">
+                    <li>Baterías de hidruro metálico de níquel y de níquel-cadmio</li>
+                    <li>Baterías de iones de litio</li>
+                    <li>Pequeñas baterías de plomo-ácido selladas</li>
+                </div>
+                <p>
+                    Estas baterías nunca deben tirarse a la basura porque contienen materiales diferentes al de las baterías de un solo uso que pueden ser peligrosos para el medio ambiente.
+
+                </p>
+
+                <p>
+                    Es importante saber que las baterías pueden tener suficiente energía para provocar incendios incluso cuando se usan y cuando parecen estar descargadas. Por seguridad, recuerde que no todas las baterías son extraíbles o reparables por el usuario; preste atención a las marcas de la batería y del producto con respecto a la seguridad y el uso de todos los tipos de baterías.
+                </p>
+
+                <br><br>
+
+                <h3>Cómo reciclar baterías recargables y de un solo uso</h3>
+
+                <p>
+                    Desafortunadamente, no se pueden desechar las pilas o baterías recargables o de un solo uso en su contenedor de reciclaje para su recolección en casa. Deben llevarse a una instalación de reciclaje especial para que puedan ser gestionadas y clasificadas. 
+                    <br><br>
+                    Una vez que hayas encontrado una instalación de reciclaje especial que acepte baterías, debes prepararlas para el reciclaje.
+                </p>
+
+                <h4><li>Baterías de un solo uso:</li></h4>
+
+                <p>
+                    Coloca las baterías en una bolsa o péguelas con cinta adhesiva: para evitar un riesgo de incendio, pegue cada extremo de la batería con cinta transparente no conductora para evitar descargas residuales. Si no tiene cinta, puede colocar cada batería en su propia bolsa de plástico.
+                    <br><br>
+                    Deposita las baterías en un recipiente no conductor: Coloca las baterías envueltas en un contenedor especial. No las coloques en una caja de metal porque podrían producir chispas y provocar un incendio.
+                </p>
+
+                <h4><li>Baterías recargables:</li></h4>
+                <p>
+                    Retira las baterías viejas de sus dispositivos electrónicos.
+                    <br><br>
+                    Al igual que con las baterías de un solo uso, es bueno encintarlas o embolsarlas de manera segura para reciclarlas.
+                </p>
+            </div>
+        </section>
+
+        <section class="Imagenes">
+            <img src="Imagenes/baterias1.jpg" alt="">
+
+            <img src="Imagenes/baterias2.jpg" alt="">
+    
+            <img src="Imagenes/baterias3.jpg" alt="">
+    
+            <img src="Imagenes/baterias4.webp" alt="">
+
+            <img src="Imagenes/baterias5.jpeg" alt="">
+        </section>
+    </main>
+
+    <footer class="footer mt-auto py-3 text-light">
+        <div class="d-flex justify-content-center mb-4">
+            <div class="col-auto">
+                <img src="Imagenes/ecocycle.png" alt="EcoCycle Logo" class="img-fluid img-thumbnail">
+            </div>
+        </div>
+    
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Sobre EcoCycle</h6>
+                    <p>EcoCycle es una plataforma dedicada a promover el reciclaje responsable y brindar información clara y accesible para facilitar el manejo adecuado de residuos en Lima Metropolitana.</p>
+                    <a href="#" class="footer-link">Más sobre nosotros</a>
+                    <p class="h6 mt-2">© EcoCycle 2024. Todos los derechos reservados.</p>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Información Útil</h6>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Política de Privacidad</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Términos y Condiciones</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Libro de Reclamaciones</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Contáctanos</h6>
+                    <p>Dirección: Av. Guardia Civil Sur 875, Chorrillos, Lima</p>
+                    <p>Email: contacto@ecocycle.pe</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f text-light"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube text-light"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter text-light"></i></a>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Suscríbete</h6>
+                    <p>Recibe las mejores recomendaciones de reciclaje y consejos ambientales directamente en tu correo.</p>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Correo electrónico">
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("cerrarsesion").addEventListener("click",function(){
+            localStorage.removeItem("activo");
+            localStorage.removeItem("user_activo");
+        });
+    </script>
+</body>
+</html>

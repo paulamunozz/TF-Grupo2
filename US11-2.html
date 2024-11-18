@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consejos - EcoCycle</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" href="CSS/US11-2.css">
+</head>
+
+<body>
+    <script>
+        let activo = JSON.parse(localStorage.getItem("activo")) || false;
+        if (activo == false) {
+            window.location.href = "US03-1.html";
+        }
+    </script>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="Imagenes/ecocycle.png" alt="" class="img-fluid logo">
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="US02.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Reciclaje
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="US08.html">Depositos</a></li>
+                            <li><a class="dropdown-item" href="US11-1.html">Consejos</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="US14.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="US21.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="img-fluid img_user" src="Imagenes/fotoperfil.jpeg" alt="">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="US04-1.html">Mi perfil</a></li>
+                            <li><a class="dropdown-item" href="canje_eco_puntos.html">Canje de Eco-Puntos</a></li>
+                            <li><a class="dropdown-item" href="historial_puntos.html">Historial Eco-Puntos</a></li>
+                            <li><a class="dropdown-item" id="cerrarsesion" href="US03-1.html">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Consejos</h1>
+    </header>
+
+    <section class="Residuos">
+        <nav>
+            <ul>
+                <li><a href="US11-1.html">Residuos orgánicos</a></li>
+                <li><a href="US11-2.html" class="A">Residuos plásticos</a></li>
+                <li><a href="US11-3.html">Residuos metálicos</a></li>
+                <li><a href="US11-4.html">Electrónicos y baterías</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <main>
+        <section class="Info">
+            <div class="datos">
+                <h2>¿Como reciclar desde mi casa?</h2>
+                <p>
+                    En la actualidad, la manera más conocida de reciclar plástico es depositando los desechos de este material en el contenedor amarillo. Una vez aquí, los responsables de su manipulación se encargarán de recoger los desechos para llevarlos a un centro de reciclaje especializado.
+                    <br><br>
+                    Sin embargo, existen otras formas en las que puedes hacerlo desde casa.
+                    <br><br>
+                    ¡Permitenos mostrarte como!
+                </p>
+            </div>
+            <div class="imagen">
+                <img src="Imagenes/plastico.webp" alt="">
+            </div>
+        </section>
+
+        <section class="Consejos">
+            <h2>5 ideas para reciclar plástico en casa</h2>
+
+            <div>
+                <li>Macetas con botellas de plástico</li>
+                <p>
+                    El tiempo de degradación del plástico oscila entre los 200 y los 1000 años dependiendo del tipo. Por esta razón reutilizar la mayor parte es beneficioso ya que se evita su degradación en microplásticos que después puede comer por accidente el pescado que acaba en nuestra mesa. Estas características pueden resultarnos muy útiles también a la hora de darle una segunda vida como maceta, por ejemplo. Bastará con recortar un trozo de la botella, llenarla de tierra y plantar tu especie favorita. También se pueden unir varias botellas para crear un original jardín vertical.
+                </p>
+
+
+                <li>Manualidades con tapones de plástico</li>
+                <p>
+                    Para reducir la cantidad de residuos plásticos, podemos optar por reconvertir los tapones de las botellas en nuevos objetos, como por ejemplo posavasos, mosaicos, cestas o broches. Para transformarlos en un material nuevo bastará con cubrir los tapones con papel de horno y aplicar calor con la plancha. Si se colocan varios tapones juntos al realizar esta operación quedarán pegados unos a otros. Ten mucho cuidado de no quemarte y realiza la actividad con máxima precaución.
+                </p>
+
+                <li>Lámparas con bolsas de plástico</li>
+                <p>
+                    La concienciación para reciclar plástico en casa a través de campañas que se centran en la reducción de bolsas de plástico tienen una gran acogida, pero no se puede conseguir de la noche a la mañana una desaparición completa de este artículo. De hecho, se calcula que en todo el mundo se malgastan 200.000 por segundo. Teniendo en cuenta que tardan 700 años en descomponerse, podemos hacernos una idea de la importancia que tiene reciclar bolsas o reciclar recipientes de plástico de otro tipo.
+                </p>
+
+                <li>Manualidades infantiles con platos y vasos de plástico</li>
+                <p>
+                    Puedes poner en marcha un taller de manualidades con doble función: reciclar plástico en casa y concienciar a los más pequeños sobre la contaminación. Si además les proponemos crear figuras de animales a partir de estos materiales estaremos contribuyendo a despertar su curiosidad sobre el medioambiente y a estimular su imaginación.
+                </p>
+
+                <li>Juguetes con envases de plástico</li>
+                <p>
+                    Los envases de detergente suelen fabricarse con polietileno, un plástico de alta densidad y dureza. Gracias a estas características es un material perfecto para construir juguetes seguros y duraderos. Camiones, guitarras o casas de muñecas son algunos de los ejemplos que podemos proponerles a los más pequeños de la casa para que aprendan la importancia del reciclaje mientras se divierten creando sus propios juguetes.
+                </p>
+            </div>
+        </section>
+
+    <section class="Imagenes">
+        <img src="Imagenes/plasticocasa1.jpg" alt="">
+
+        <img src="Imagenes/plasticocasa2.jpg" alt="">
+
+        <img src="Imagenes/plasticocasa3.jpg" alt="">
+
+        <img src="Imagenes/plasticocasa4.jpg" alt="">
+    </section>
+    </main>
+
+    <footer class="footer mt-auto py-3 text-light">
+        <div class="d-flex justify-content-center mb-4">
+            <div class="col-auto">
+                <img src="Imagenes/ecocycle.png" alt="EcoCycle Logo" class="img-fluid img-thumbnail">
+            </div>
+        </div>
+    
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Sobre EcoCycle</h6>
+                    <p>EcoCycle es una plataforma dedicada a promover el reciclaje responsable y brindar información clara y accesible para facilitar el manejo adecuado de residuos en Lima Metropolitana.</p>
+                    <a href="#" class="footer-link">Más sobre nosotros</a>
+                    <p class="h6 mt-2">© EcoCycle 2024. Todos los derechos reservados.</p>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Información Útil</h6>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Política de Privacidad</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Términos y Condiciones</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Libro de Reclamaciones</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Contáctanos</h6>
+                    <p>Dirección: Av. Guardia Civil Sur 875, Chorrillos, Lima</p>
+                    <p>Email: contacto@ecocycle.pe</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f text-light"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube text-light"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter text-light"></i></a>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Suscríbete</h6>
+                    <p>Recibe las mejores recomendaciones de reciclaje y consejos ambientales directamente en tu correo.</p>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Correo electrónico">
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("cerrarsesion").addEventListener("click", function () {
+            localStorage.removeItem("activo");
+            localStorage.removeItem("user_activo");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - EcoCycle</title>
+
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" href="CSS/US14.css">
+</head>
+<body class="fondo_verde">
+    <script>
+        let activo = JSON.parse(localStorage.getItem("activo")) || false;
+        if(activo==false){
+            window.location.href = "US03-1.html";
+        }
+    </script>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="Imagenes/ecocycle.png" alt="" class="img-fluid logo">
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="US02.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Reciclaje
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="US08.html">Depositos</a></li>
+                            <li><a class="dropdown-item" href="US11-1.html">Consejos</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="US14.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="US21.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="img-fluid img_user" src="Imagenes/fotoperfil.jpeg" alt="">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="US04-1.html">Mi perfil</a></li>
+                            <li><a class="dropdown-item" href="canje_eco_puntos.html">Canje de Eco-Puntos</a></li>
+                            <li><a class="dropdown-item" href="historial_puntos.html">Historial Eco-Puntos</a></li>
+                            <li><a class="dropdown-item" id="cerrarsesion" href="US03-1.html">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Eventos - EcoDay</h1>
+    </header>
+
+    <main>
+        <section class="Registro_Event">
+            <img src="Imagenes/newevent.png" alt="">
+            <div class="content-right">
+                <h2>Regístrate en nuestros eventos y/o desafíos</h2>
+                <p>
+                    ¿Quieres ser parte de nuestros eventos y/o desafíos?
+                    <br>Coloca tus datos aqui:
+                </p>
+                <form>
+                    <input type="tel" placeholder="Nombres y Apellidos Completos">
+                    
+                    <div class="input-group">
+                        <input type="email" placeholder="Correo electrónico">
+                        <input type="tel" placeholder="Teléfono">
+                    </div>
+                    <button type="submit" class="ingresar">Ingresar solicitud</button>
+                </form>
+            </div>
+        </section>
+        
+
+        <section class="Deseas">
+            <div class="ImagenD2">
+                <img src="Imagenes/eventoimagen.png" alt="Imagen del evento">
+            </div>
+            <div class="Info">
+                <h2>EVENTOS SEMANALES EN TU ZONA!</h2>
+                <p>
+                    Nosotros como organización te escuchamos. <br>
+                    Por eso, cada fin de semana realizamos eventos en distintos puntos de Lima.
+                    <br>
+                    ¡Pronto en tu distrito! 🫡
+                </p>
+                <ul>
+                    <li><strong>Lugar:</strong> Parque Maria Reiche</li>
+                    <li><strong>Hora:</strong> 3:00pm</li>
+                    <button>Unirme </button>
+                </ul>
+            </div>
+
+        </section>
+        
+        
+
+        <section class="MapaCalor">
+            <div class="Subtitulo1">
+                <h2>RECUERDO DE LOS EVENTOS </h2>
+            </div>
+
+            <div class="Mapa">
+                <img src="Imagenes/1.jpg" alt="">
+            </div>
+
+        </section>
+
+
+            <section class="MapaDepositos">
+                <div class="FEEDBACK">
+                    <h2>FEEDBACK Y EVALUACIÓN</h2>
+                </div>
+        
+                <div class="comentarios">
+                    <div class="comentarios">
+                        
+                        <!-- Zona para la imagen de perfil -->
+                        <div class="perfil">
+                            <img src="Imagenes/fotoperfil.jpeg" alt="Imagen de perfil">
+                        </div>
+                    
+                        <!-- Zona para el campo de texto para comentarios -->
+                        <div class="comentarios-texto">
+                            <input type="text" placeholder="Comentarios">
+                        </div>
+                    </div>
+                    
+                
+                    <!-- Zona para el formulario de clasificación con estrellas -->
+                    <div class="comentarios-contenedor">
+                        <!-- Estrellas -->
+                        <form>
+                            <p class="clasificacion">
+                                <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                                --><label for="radio1">★</label><!--
+                                --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                                --><label for="radio2">★</label><!--
+                                --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                                --><label for="radio3">★</label><!--
+                                --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                                --><label for="radio4">★</label><!--
+                                --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                                --><label for="radio5">★</label>
+                            </p>
+                        </form>
+                    
+                        <!-- Redes sociales -->
+                        <div class="redes-sociales">
+                            <div class="red1">
+                                <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F" target="_blank">
+                                    <img src="Imagenes/Facebook_Logo_(2019).png" alt="Facebook Logo">
+                                </a>
+                            </div>
+                            <div class="red2">
+                                <a href="https://www.instagram.com/tu_red_social" target="_blank">
+                                    <img src="Imagenes/Instagram_logo_2022.svg.webp" alt="Instagram Logo">
+                                </a>
+                            </div>
+                            <div class="red3">
+                                <a href="https://x.com/?lang=esl" target="_blank">
+                                    <img src="Imagenes/Logo_of_Twitter.svg.png" alt="Twitter Logo">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+            </section>
+            <section>
+                <section>
+                    <h2>Mejores Comentarios 115 ⭐</h2> 
+                    <p class="comentario1">Calificación: ⭐⭐⭐⭐<br>Cristiano hace 3 minutos<br>
+                        El evento fue increíblemente útil y bien organizado. 
+                        Me gustó mucho la charla sobre cómo reciclar correctamente diferentes tipos de plásticos. También fue genial ver una demostración en vivo de cómo funcionan los centros de reciclaje locales. ¡Definitivamente asistiré a futuros eventos como este! Solo recomendaría tener más estaciones de agua para los asistentes, ya que hacía bastante calor.</p>
+                    <p class="comentario2">Calificación: ⭐⭐⭐⭐<br>Leo hace 25 minutos<br>Fue muy útil conocer más sobre el reciclaje de residuos electrónicos, algo que desconocía. Me hubiera gustado que incluyeran una sesión más práctica, como un taller donde los asistentes pudieran reciclar sus propios residuos in situ. ¡Sería una gran adición para el próximo evento!</p>
+                    <p class="comentario3">Calificación: ⭐⭐⭐⭐<br>Ney hace 49 minutos<br>El evento fue una gran oportunidad para aprender sobre reciclaje y cómo podemos hacer pequeños cambios en nuestra vida diaria para ayudar al medio ambiente. Los ponentes fueron claros y se notaba que dominaban el tema. Sin embargo, creo que la duración fue un poco larga, y hacia el final se sintió repetitivo. Me gustaría ver más actividades interactivas en futuras ediciones para mantener la atención de los participantes. ¡En general, una experiencia muy positiva!</p>
+                </section>
+                
+            </section>
+        
+    </main>
+
+    <footer class="footer mt-auto py-3 text-light">
+        <div class="d-flex justify-content-center mb-4">
+            <div class="col-auto">
+                <img src="Imagenes/ecocycle.png" alt="EcoCycle Logo" class="img-fluid img-thumbnail">
+            </div>
+        </div>
+    
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Sobre EcoCycle</h6>
+                    <p>EcoCycle es una plataforma dedicada a promover el reciclaje responsable y brindar información clara y accesible para facilitar el manejo adecuado de residuos en Lima Metropolitana.</p>
+                    <a href="#" class="footer-link">Más sobre nosotros</a>
+                    <p class="h6 mt-2">© EcoCycle 2024. Todos los derechos reservados.</p>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Información Útil</h6>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Política de Privacidad</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Términos y Condiciones</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Libro de Reclamaciones</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Contáctanos</h6>
+                    <p>Dirección: Av. Guardia Civil Sur 875, Chorrillos, Lima</p>
+                    <p>Email: contacto@ecocycle.pe</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f text-light"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube text-light"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter text-light"></i></a>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Suscríbete</h6>
+                    <p>Recibe las mejores recomendaciones de reciclaje y consejos ambientales directamente en tu correo.</p>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Correo electrónico">
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("cerrarsesion").addEventListener("click",function(){
+            localStorage.removeItem("activo");
+            localStorage.removeItem("user_activo");
+        });
+    </script>
+</body>
+</html>

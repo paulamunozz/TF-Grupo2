@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - EcoCycle</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/estilo.css">
+</head>
+
+<body class="fondo_verde">
+    <script>
+        let activo = JSON.parse(localStorage.getItem("activo")) || false;
+        if (activo == false) {
+            window.location.href = "US03-1.html";
+        }
+    </script>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <img src="Imagenes/ecocycle.png" alt="" class="img-fluid logo">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="US02.html">Inicio</a>
+                </li>
+                <li class="nav-item dropdown d-flex align-items-center">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Reciclaje
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="US08.html">Depositos</a></li>
+                        <li><a class="dropdown-item" href="US11-1.html">Consejos</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="US14.html">Eventos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="US21.html">Contactanos</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img class="img-fluid img_user" src="Imagenes/fotoperfil.jpeg" alt="">
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="US04-1.html">Mi perfil</a></li>
+                        <li><a class="dropdown-item" href="canje_eco_puntos.html">Canje de Eco-Puntos</a></li>
+                            <li><a class="dropdown-item" href="historial_puntos.html">Historial Eco-Puntos</a></li>
+                        <li><a class="dropdown-item" id="cerrarsesion" href="US03-1.html">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <section class="conoce position-relative">
+        <img src="Imagenes/reciclajecomp2.png" alt="Reciclaje" class="img-fluid w-100">
+        <button class="btn btn-primary btn-conocemas position-absolute bottom-0 start-50 translate-middle-x mb-3">
+            Conoce más
+        </button>
+    </section>
+
+    <h2 class="mb-4 titulo_acerca text-center mt-3">Acerca de nosotros</h2>
+    <div class="container mt-3 mb-3 d-flex flex-column">
+        <section class="about-us text-center mb-5">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="Imagenes/ecocycle.png" class="img-fluid" alt="Logo">
+                </div>
+                <div class="col-md-6 fondo_blanco">
+                    <p>Estamos acá para crear un verdadero impacto positivo en el medio ambiente y nuestro planeta,
+                        brindando información de confianza acerca de cómo desechar nuestros residuos o cómo poder
+                        reciclarlos de manera segura y correcta.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="objetivo text-center">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p>Nuestro objetivo es mejorar la gestión de residuos en Lima Metropolitana facilitando el acceso a
+                        información, tecnología y consejos prácticos que promuevan el reciclaje, educando a personas y
+                        el cuidado del medio ambiente.</p>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="Imagenes/reciclajecomp.png" class="img-fluid objetivoimg" alt="Objetivo">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer mt-auto py-3 text-light">
+        <div class="d-flex justify-content-center mb-4">
+            <div class="col-auto">
+                <img src="Imagenes/ecocycle.png" alt="EcoCycle Logo" class="img-fluid img-thumbnail">
+            </div>
+        </div>
+    
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Sobre EcoCycle</h6>
+                    <p>EcoCycle es una plataforma dedicada a promover el reciclaje responsable y brindar información clara y accesible para facilitar el manejo adecuado de residuos en Lima Metropolitana.</p>
+                    <a href="#" class="footer-link">Más sobre nosotros</a>
+                    <p class="h6 mt-2">© EcoCycle 2024. Todos los derechos reservados.</p>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Información Útil</h6>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Política de Privacidad</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Términos y Condiciones</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Libro de Reclamaciones</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Contáctanos</h6>
+                    <p>Dirección: Av. Guardia Civil Sur 875, Chorrillos, Lima</p>
+                    <p>Email: contacto@ecocycle.pe</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f text-light"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube text-light"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter text-light"></i></a>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Suscríbete</h6>
+                    <p>Recibe las mejores recomendaciones de reciclaje y consejos ambientales directamente en tu correo.</p>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Correo electrónico">
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("cerrarsesion").addEventListener("click", function () {
+            localStorage.removeItem("activo");
+            localStorage.removeItem("user_activo");
+        });
+    </script>
+</body>
+
+</html>

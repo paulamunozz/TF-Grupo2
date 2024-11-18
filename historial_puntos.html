@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - EcoCycle</title>
+    <link rel="stylesheet" href="CSS/US04-2.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <style>
+        .img-container {
+            position: relative; 
+        }
+
+        .price-tag {
+            position: absolute;
+            top: 10px; 
+            left: 10px; 
+            background-color: #AFF4C6;
+            color: #14AE5C;
+            padding: 5px 10px; 
+            border-radius: 5px;
+            font-size: 1rem; 
+            font-weight: bold; 
+            z-index: 10; 
+        }
+
+        .img-container {
+            height: 200px; 
+            overflow: hidden; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body class="fondo_verde">
+    <script>
+        let activo = JSON.parse(localStorage.getItem("activo")) || false;
+        if(activo==false){
+            window.location.href = "US03-1.html";
+        }
+    </script>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="Imagenes/ecocycle.png" alt="" class="img-fluid logo">
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="US02.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Reciclaje
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="US08.html">Depositos</a></li>
+                            <li><a class="dropdown-item" href="US11-1.html">Consejos</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="US14.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="US21.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="img-fluid img_user" src="Imagenes/fotoperfil.jpeg" alt="">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="US04-1.html">Mi perfil</a></li>
+                            <li><a class="dropdown-item" href="canje_eco_puntos.html">Canje de Eco-Puntos</a></li>
+                            <li><a class="dropdown-item" href="historial_puntos.html">Historial Eco-Puntos</a></li>
+                            <li><a class="dropdown-item" id="cerrarsesion" href="US03-1.html">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h2 class="mb-4 titulo_acerca text-center mt-3 d-flex align-items-center justify-content-center" style="height: 150px;">
+        Historial de Puntos
+    </h2>
+
+
+    <div class="container py-5 mb-5" style="background-color: white;">
+        <div class="row g-2 align-items-center">
+            <div class="BotonGuardar col-12 d-flex justify-content-end">
+                <nav>
+                    <ul>
+                        <li><a href="US04-1.html">Guardar Perfil</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col-6">
+                <div class="d-flex justify-content-end">
+                    <img src="Imagenes/fotoperfil.jpeg" alt="Imagen" class="img-fluid rounded-circle" style="max-width: 100%; height: auto; max-height: 200px;">
+                </div>
+            </div>
+    
+            <div class="col-6">
+                <div class="text-start">
+                    <h2 id="nombre"></h2>
+                
+                    <div class="p-3 mb-3" style="background-color: #90A955; color: white; border-radius: 5px; display: inline-block;" >
+                        Cantidad de Puntos
+                    </div>
+                
+                    <div class="p-3" style="background-color: #ECF39E; color: white; border-radius: 5px; max-width: 400px; text-align: center;">
+                        <p class="fw-bold mb-0" style="font-size: 40px;color:black" id="cant_puntos"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 pt-4 pb-4" style="border: 3px solid #4cac4c;" id="depositos">
+                <h5 class="text-center">Aún no cuenta con registros dentro de este campo</h5>
+                <div class="text-center">
+                    <img src="Imagenes/noencontrado.webp" alt="No encontrado" class="img-fluid" style="max-width: 300px; height: auto;">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    
+    
+
+
+    <footer class="footer mt-auto py-3 text-light">
+        <div class="d-flex justify-content-center mb-4">
+            <div class="col-auto">
+                <img src="Imagenes/ecocycle.png" alt="EcoCycle Logo" class="img-fluid img-thumbnail">
+            </div>
+        </div>
+    
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Sobre EcoCycle</h6>
+                    <p>EcoCycle es una plataforma dedicada a promover el reciclaje responsable y brindar información clara y accesible para facilitar el manejo adecuado de residuos en Lima Metropolitana.</p>
+                    <a href="#" class="footer-link">Más sobre nosotros</a>
+                    <p class="h6 mt-2">© EcoCycle 2024. Todos los derechos reservados.</p>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Información Útil</h6>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Política de Privacidad</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Términos y Condiciones</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Libro de Reclamaciones</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Contáctanos</h6>
+                    <p>Dirección: Av. Guardia Civil Sur 875, Chorrillos, Lima</p>
+                    <p>Email: contacto@ecocycle.pe</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f text-light"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube text-light"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter text-light"></i></a>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Suscríbete</h6>
+                    <p>Recibe las mejores recomendaciones de reciclaje y consejos ambientales directamente en tu correo.</p>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Correo electrónico">
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("cerrarsesion").addEventListener("click",function(){
+            localStorage.removeItem("user_activo");
+            localStorage.removeItem("activo");
+        });
+
+        const user = JSON.parse(localStorage.getItem("user_activo")) || [];
+        if (user && user.id) {
+            let puntosArray = JSON.parse(localStorage.getItem("puntos")) || [];
+            let userPuntos = puntosArray.find(p => p.id === user.id);
+
+            if (!userPuntos) {
+                // Si no existe, agrega un nuevo registro con puntos es igual a  0
+                puntosArray.push({ id: user.id, puntos: 0 });
+                localStorage.setItem("puntos", JSON.stringify(puntosArray));
+                document.getElementById("cant_puntos").innerText="0";
+            } else {
+                // Si existe, muestra los puntos actuales
+                document.getElementById("cant_puntos").innerText=userPuntos.puntos;
+            }
+
+            document.getElementById("nombre").innerHTML=user.name;
+        } else {
+            alert("Noa hay usuario activo.");
+        }
+
+        ///listar el historial de puntos
+        let depositos = JSON.parse(localStorage.getItem("depositos"));
+        let depositos_html = document.getElementById("depositos");
+
+        if (depositos) {
+            if (user) {
+                let resultado = "<ul>";
+                let contar = 0;
+                
+                for (let i = 0; i < depositos.length; i++) {
+                    if (depositos[i].id == user.id) {
+                        contar += 1;
+                        resultado += "<li>" +
+                            "Día: " + depositos[i].dia + "/" + depositos[i].mes + "/" + depositos[i].anio + 
+                            ", Hora: " + depositos[i].hora + 
+                            ", Dirección: " + depositos[i].direccion + 
+                            ", Tipo de Material: " + depositos[i].tipoMaterial +
+                            "</li>";
+                    }
+                }
+                
+                resultado += "</ul>";
+
+                if (contar === 0) {
+                    depositos_html.innerHTML = `
+                        <h5 class="text-center">Aún no cuenta con registros dentro de este campo</h5>
+                        <div class="text-center">
+                            <img src="Imagenes/noencontrado.webp" alt="No encontrado" class="img-fluid" style="max-width: 300px; height: auto;">
+                        </div>
+                    `;
+                } else {
+                    depositos_html.innerHTML = resultado;
+                }
+                
+            } else {
+                alert("Usuario no registrado");
+            }
+        } else {
+            depositos_html.innerHTML = `
+                <h5 class="text-center">Aún no cuenta con registros dentro de este campo</h5>
+                <div class="text-center">
+                    <img src="Imagenes/noencontrado.webp" alt="No encontrado" class="img-fluid" style="max-width: 300px; height: auto;">
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

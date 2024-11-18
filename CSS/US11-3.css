@@ -1,0 +1,147 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+body{
+    background-color: #ECF39E;
+}
+
+header{
+    text-align: center;
+    color: white;
+    border-radius: 0px;
+    border-style: none;
+    background: #31572C;
+    padding: 20px;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Residuos nav{
+    float: left;
+    background: #90A955;
+    height: 52px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Residuos nav ul{
+    float: none;
+    list-style: none;
+}
+
+.Residuos nav ul li{
+    display: inline-block;
+    line-height: 50px;
+}
+
+.Residuos nav ul li a{
+    color: white;
+    font-size: 18px;
+    padding: 0 70px;
+    border-radius: 0;
+    border-width: 100%;
+    padding-top: 13px;
+    padding-bottom: 15px;
+    text-decoration: none;
+}
+
+.Residuos nav ul li a.A{
+    background: #122A10
+}
+
+.Residuos li a:hover{
+    background: #4F772D;
+}
+
+main{
+    margin: auto;
+    float: left;
+}
+
+.Info{
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    padding-top: 50px;
+}
+
+.Info .imagen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen img{
+    width: 70%;
+}
+
+.datos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.datos h2{
+    background: white;
+    padding: 10px 30px;
+    border-radius: 0 5px 5px 0 ;
+}
+
+.datos p{
+    margin: 20px 50px;
+    font-size: large;
+    text-align: justify;
+}
+
+.Consejos{
+    float: right;
+    background: white;
+    border-radius: 0;
+    padding: 10px 50px;
+    padding-bottom: 23px;
+    width: 60%;
+    margin-right: 20px;
+    margin-top: 25px;
+    box-sizing: border-box;
+}
+
+.Consejos h2{
+    float: left;
+    margin-top: 20px;
+}
+
+.Consejos p{
+    float: left;
+    padding-top: 20px;
+}
+
+.Consejos li{
+    float: left;
+    margin: 15px;
+    padding-left: 40px;
+}
+
+.Imagenes{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit);
+}
+
+.Imagenes img{
+    float: left;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 67.5px;
+    margin-left: 25px;
+    padding-right: 50px;
+}
+
+footer{
+    float: left;
+    width: 100%;
+}

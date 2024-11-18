@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depositos - EcoCycle</title>
+
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/estilo.css">
+    
+
+</head>
+
+<body class="fondo_verde">
+    <script>
+        let activo = JSON.parse(localStorage.getItem("activo")) || false;
+        if (activo == false) {
+            window.location.href = "US03-1.html";
+        }
+    </script>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="Imagenes/ecocycle.png" alt="" class="img-fluid logo">
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="US02.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Reciclaje
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="US08.html">Depositos</a></li>
+                            <li><a class="dropdown-item" href="US11-1.html">Consejos</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="US14.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="US21.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="img-fluid img_user" src="Imagenes/fotoperfil.jpeg" alt="">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="US04-1.html">Mi perfil</a></li>
+                            <li><a class="dropdown-item" href="canje_eco_puntos.html">Canje de Eco-Puntos</a></li>
+                            <li><a class="dropdown-item" href="historial_puntos.html">Historial Eco-Puntos</a></li>
+                            <li><a class="dropdown-item" id="cerrarsesion" href="US03-1.html">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <main>
+        <div class="container py-4">
+
+            <header class="text-center mb-3">
+                <h1 class="titulo_fondo_verde">Depositos</h1>
+            </header>
+
+            <section class="Conoce mb-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center">
+                        <img src="Imagenes/imagend1.jpg" alt="Conoce nuestros tipos de depósito" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="text-center mb-3">Conoce nuestros tipos de depósito</h3>
+                        <p>
+                            El reciclaje se clasifica en varios tipos según el material: reciclaje de papel y cartón, que
+                            convierte papel usado en nuevos productos; reciclaje de vidrio, que reutiliza botellas y frascos;
+                            reciclaje de plásticos, que incluye la transformación de envases en nuevos artículos; reciclaje de
+                            metales, como el aluminio y el acero; y reciclaje de residuos orgánicos, que genera compost a partir
+                            de restos de alimentos. Cada tipo reduce residuos y ayuda a preservar los recursos naturales.
+                        </p>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="Deseas mb-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h3 class="text-center mb-3">¿Deseas saber cómo se recicla adecuadamente?</h3>
+                        <p>
+                            Nosotros como organización te brindamos una guía especializada de reciclaje donde podrás poner en
+                            práctica un reciclaje adecuado y consciente en tu entorno.
+                            <br><br>
+                            Recuerda que reciclar correctamente en nuestros puntos de reciclaje te ayudará a generar más
+                            Eco-puntos! 👀
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="Imagenes/imagend2.webp" alt="¿Deseas saber cómo se recicla adecuadamente?" class="img-fluid rounded">
+                    </div>
+                </div>
+            </section>
+    
+            <section class="MapaCalor mb-5">
+                <h2 class="text-center mb-4 titulo_fondo_verde">Mapa de calor con Áreas de Residuos</h2>
+                <div class="row">
+
+                    <div id="map" class="col-lg-8 text-center"></div>
+
+
+                    <div class="col-lg-4">
+                        <h3>Detalles</h3>
+                        <h4 class="mt-3">Tipos de residuos: Plásticos</h4>
+                        <ul class="mt-2">
+                            <li>
+                                <strong>Reciclar:</strong> Botellas de agua, envases de productos de limpieza, bolsas plásticas 
+                                (llevar a puntos de reciclaje específicos).
+                            </li>
+                            <li class="mt-3">
+                                <strong>No reciclar:</strong> Plásticos contaminados con restos de comida o sustancias peligrosas.
+                            </li>
+                        </ul>
+                        <h4 class="mt-4">
+                            Consejo: Optar por reutilizar bolsas de tela y comprar productos con envases reutilizables o reciclables.
+                        </h4>
+                    </div>
+                </div>
+            </section>
+           
+            <div class="row mb-4">
+                <div class="col">
+                    <section class="MapaDepositos">
+                        <div class="Subtitulo">
+                            <h2 class="text-start titulo_fondo_verde">¡Visita nuestros principales depósitos de reciclaje!</h2>
+                        </div>
+                        <div class="Mapa">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41504.82763156433!2d-77.05646836751573!3d-12.092914863895745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c93be89f8a05%3A0xef5b119f38544108!2sRecicla%20Latam!5e0!3m2!1ses-419!2spe!4v1729559419152!5m2!1ses-419!2spe"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <section class="reportesSection">
+                        <div class="reportesHistorial mb-4">
+                            
+                            <div class="row">
+                                
+                                <div class="col-md-6">
+                                    <h2 class="text-center titulo_fondo_verde">Historial de Reportes</h2>
+                                    <div class="reporte border rounded p-3 mb-3">
+                                        <p><span>Reporte N.º 001</span></p>
+                                        <p>Ubicación: Parque Central, Calle 4, Ciudad X</p>
+                                        <p>Fecha de envío: 15/09/2024</p>
+                                        <p>Estado: En proceso</p>
+                                        <p>Descripción: Contenedores de reciclaje desbordados y acumulación de plásticos en el área de juegos.</p>
+                                        <p>Acciones tomadas: Se ha programado una limpieza para el 18/09/2024.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h2 class="text-center"> <br></h2>
+                                    <div class="reporte border rounded p-3 mb-3">
+                                        <p><span>Reporte N.º 002</span></p>
+                                        <p>Ubicación: Avenida Industrial, Zona Norte</p>
+                                        <p>Fecha de envío: 08/09/2024</p>
+                                        <p>Estado: Completado</p>
+                                        <p>Descripción: Basura y escombros en la acera cerca de la fábrica.</p>
+                                        <p>Acciones tomadas: Se completó la limpieza el 10/09/2024, y se colocaron señales de no tirar basura.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+    
+                        <div class="reporteEnviar">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div>
+                                        <h2 class="text-center titulo_fondo_verde">Reportar Área Contaminada</h2>
+                                        <textarea class="form-control mb-3" rows="4" placeholder="Escriba aquí su descripción..."></textarea>
+                                        <button class="btn btn-primary w-100 mb-3">Enviar Reporte</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <div class="mapa">
+                                        <img src="Imagenes/mapareportes.png" alt="Mapa de área contaminada" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </section>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer mt-auto py-3 text-light">
+        <div class="d-flex justify-content-center mb-4">
+            <div class="col-auto">
+                <img src="Imagenes/ecocycle.png" alt="EcoCycle Logo" class="img-fluid img-thumbnail">
+            </div>
+        </div>
+
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Sobre EcoCycle</h6>
+                    <p>EcoCycle es una plataforma dedicada a promover el reciclaje responsable y brindar información
+                        clara y accesible para facilitar el manejo adecuado de residuos en Lima Metropolitana.</p>
+                    <a href="#" class="footer-link">Más sobre nosotros</a>
+                    <p class="h6 mt-2">© EcoCycle 2024. Todos los derechos reservados.</p>
+                </div>
+
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Información Útil</h6>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Política de Privacidad</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Términos y Condiciones</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Libro de Reclamaciones</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Contáctanos</h6>
+                    <p>Dirección: Av. Guardia Civil Sur 875, Chorrillos, Lima</p>
+                    <p>Email: contacto@ecocycle.pe</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f text-light"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube text-light"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter text-light"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Suscríbete</h6>
+                    <p>Recibe las mejores recomendaciones de reciclaje y consejos ambientales directamente en tu correo.
+                    </p>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Correo electrónico">
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhu3qdkccJl_KvARwYApNXko-3663JNHw&libraries=visualization&callback=initMap">
+    </script>
+
+    <script>
+        document.getElementById("cerrarsesion").addEventListener("click", function () {
+            localStorage.removeItem("activo");
+            localStorage.removeItem("user_activo");
+        });
+
+
+        function initMap() {
+            const heatMapData = [
+            {location: new google.maps.LatLng(-12.046374, -77.042793), weight: 0.5}, // Plaza Mayor (Centro de Lima)
+            {location: new google.maps.LatLng(-12.04318, -77.02824), weight: 0.8},   // Parque Kennedy (Miraflores)
+            {location: new google.maps.LatLng(-12.088217, -77.035874), weight: 2},   // Plaza San Miguel (San Miguel)
+            {location: new google.maps.LatLng(-12.123239, -77.030643), weight: 3},   // San Borja
+            {location: new google.maps.LatLng(-12.07078, -77.083793), weight: 2},    // Lince
+            {location: new google.maps.LatLng(-12.056192, -77.118608), weight: 1},   // Chorrillos
+            {location: new google.maps.LatLng(-12.146234, -77.022251), weight: 0.6}, // Barranco
+            {location: new google.maps.LatLng(-12.090603, -77.048785), weight: 3},   // Miraflores
+            {location: new google.maps.LatLng(-12.035928, -77.006437), weight: 0.4}, // Callao
+            {location: new google.maps.LatLng(-12.046795, -77.034084), weight: 2},   // Cercado de Lima
+
+            {location: new google.maps.LatLng(-12.032819, -77.042287), weight: 1}, // San Isidro (barrio cercano al centro)
+            {location: new google.maps.LatLng(-12.046174, -77.028245), weight: 1}, // Miraflores (barrio cercano)
+            {location: new google.maps.LatLng(-12.072688, -77.072219), weight: 1.5}, // Magdalena del Mar
+            {location: new google.maps.LatLng(-12.079828, -77.028732), weight: 1.8}, // San Borja (barrio cercano)
+            {location: new google.maps.LatLng(-12.021577, -77.055529), weight: 2},   // Surco (barrio cercano)
+            {location: new google.maps.LatLng(-12.097146, -77.028902), weight: 0.5}, // Pueblo Libre
+            {location: new google.maps.LatLng(-12.132532, -77.020739), weight: 1},   // Barranco (barrio turístico)
+            {location: new google.maps.LatLng(-12.076317, -77.059058), weight: 1.2}, // San Martín de Porres
+            {location: new google.maps.LatLng(-12.052214, -77.030074), weight: 0.7}, // Jesus María
+            {location: new google.maps.LatLng(-12.029524, -77.083627), weight: 0.9}, // La Victoria
+            {location: new google.maps.LatLng(-12.073263, -77.045018), weight: 1.6}, // Breña
+            {location: new google.maps.LatLng(-12.025416, -77.069723), weight: 1.4}, // El Agustino
+            {location: new google.maps.LatLng(-12.020292, -77.070215), weight: 1.3}, // Rimac
+            {location: new google.maps.LatLng(-12.087091, -77.057148), weight: 1.2}, // San Luis
+            {location: new google.maps.LatLng(-12.062227, -77.052105), weight: 1.4}, // San Juan de Lurigancho
+            {location: new google.maps.LatLng(-12.092398, -77.012765), weight: 1.8}, // Ate
+            {location: new google.maps.LatLng(-12.078468, -77.028697), weight: 2},   // La Molina
+            {location: new google.maps.LatLng(-12.059239, -77.042571), weight: 1.1}, // Chaclacayo
+            {location: new google.maps.LatLng(-12.116845, -77.011347), weight: 0.8}, // Los Olivos
+            {location: new google.maps.LatLng(-12.088957, -77.014129), weight: 0.7}, // San Juan de Miraflores
+            {location: new google.maps.LatLng(-12.101622, -77.039229), weight: 0.9}, // Callao (zona cercana)
+            {location: new google.maps.LatLng(-12.101622, -77.039229), weight: 0.9}, // Callao (zona cercana)
+
+            ];
+
+            const lima = new google.maps.LatLng(-12.046374, -77.042793);
+
+            const map = new google.maps.Map(document.getElementById('map'), {
+                center: lima,
+                zoom: 12,
+                mapTypeId: 'roadmap'
+            });
+
+            const heatmap = new google.maps.visualization.HeatmapLayer({
+                data: heatMapData
+            });
+
+            heatmap.setMap(map);
+
+        }
+    </script>
+</body>
+
+</html>

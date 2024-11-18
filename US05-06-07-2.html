@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - EcoCycle</title>
+    <link rel="stylesheet" href="CSS/US05-06-07-2.css">
+
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/estilo.css">
+</head>
+<body>
+    <script>
+        let activo = JSON.parse(localStorage.getItem("activo")) || false;
+        if(activo==false){
+            window.location.href = "US03-1.html";
+        }
+    </script>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="Imagenes/ecocycle.png" alt="" class="img-fluid logo">
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="US02.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Reciclaje
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="US08.html">Depositos</a></li>
+                            <li><a class="dropdown-item" href="US11-1.html">Consejos</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="US14.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="US21.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="img-fluid img_user" src="Imagenes/fotoperfil.jpeg" alt="">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="US04-1.html">Mi perfil</a></li>
+                            <li><a class="dropdown-item" href="canje_eco_puntos.html">Canje de Eco-Puntos</a></li>
+                            <li><a class="dropdown-item" href="historial_puntos.html">Historial Eco-Puntos</a></li>
+                            <li><a class="dropdown-item" id="cerrarsesion" href="US03-1.html">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Suscripción</h1>
+    </header>
+
+    <main>
+        <section class="PlanActual">
+            <h2 class="A">Plan Actual:</h2>
+            <h2 class="B">Free</h2>
+        </section>
+
+        <section class="Plan">
+            <div class="Contenido">
+                <h3>Plan mensual</h3>
+
+                <h2>S/.15 mensuales</h2>
+
+                <ul>
+                    <li>Precio completo</li>
+                    <li>Reciba contenido exclusivo</li>
+                    <li>Obtén reportes personalizados</li>
+                    <li>Descuentos para el canjeo de Eco-Puntos</li>
+                    <li>Y más sorpresas...</li>
+                </ul>
+
+                <button class="Pagar"><label for="Pago">Quiero ser Premium</label></button>
+            </div>
+
+            <div class="Contenido">
+                <h3>Plan anual</h3>
+
+                <h2>S/.153 anual</h2>
+
+                <ul>
+                    <li>15% de descuento</li>
+                    <li>Reciba contenido exclusivo</li>
+                    <li>Obtén reportes personalizados</li>
+                    <li>Descuentos para el canjeo de Eco-Puntos</li>
+                    <li>Y más sorpresas...</li>
+                </ul>
+
+                <button class="Pagar"><label for="Pago">Quiero ser Premium</label></button>
+            </div>
+        </section>
+
+        <input type="checkbox" id="Pago">
+        <section class="Ventana">
+            <div class="contenido">
+                <h4>Completa tu suscripción</h4>
+                
+                <div class="input">
+                    <input type="text" name="Nombre" id="nombre" placeholder="Nombre">
+                    <input type="text" name="Apellido" id="apellido" placeholder="Apellido">
+                    <input type="text" name="N° Tarjeta" id="tarjeta" placeholder="N° Tarjeta">
+                    <input type="text" name="CVV" id="cvv" placeholder="CVV">
+                </div>
+
+                <div class="botones">
+                    <nav><p><a href="US05-06-07-1.html">Aceptar</a></p></nav>
+                    <button class="Cancelar"><label for="Pago">Cancelar</label></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer mt-auto py-3 text-light">
+        <div class="d-flex justify-content-center mb-4">
+            <div class="col-auto">
+                <img src="Imagenes/ecocycle.png" alt="EcoCycle Logo" class="img-fluid img-thumbnail">
+            </div>
+        </div>
+    
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Sobre EcoCycle</h6>
+                    <p>EcoCycle es una plataforma dedicada a promover el reciclaje responsable y brindar información clara y accesible para facilitar el manejo adecuado de residuos en Lima Metropolitana.</p>
+                    <a href="#" class="footer-link">Más sobre nosotros</a>
+                    <p class="h6 mt-2">© EcoCycle 2024. Todos los derechos reservados.</p>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Información Útil</h6>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Política de Privacidad</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Términos y Condiciones</a>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" class="footer-link">Libro de Reclamaciones</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Contáctanos</h6>
+                    <p>Dirección: Av. Guardia Civil Sur 875, Chorrillos, Lima</p>
+                    <p>Email: contacto@ecocycle.pe</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f text-light"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube text-light"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter text-light"></i></a>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h6>Suscríbete</h6>
+                    <p>Recibe las mejores recomendaciones de reciclaje y consejos ambientales directamente en tu correo.</p>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Correo electrónico">
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("cerrarsesion").addEventListener("click",function(){
+            localStorage.removeItem("activo");
+            localStorage.removeItem("user_activo");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+body{
+    background-color: #ECF39E;
+    margin: 0px;
+}
+
+main{
+    box-sizing: border-box;
+    background-color: white;   
+    margin: 40px;
+    margin-top: 0px;
+}
+
+header{
+    text-align: center;
+    color: white;
+    border-radius: 0px;
+    border-style: none;
+    background: #31572C;
+    padding: 18px;
+    float: left;
+    width: 100%;
+}
+
+div nav{
+    float: right;
+    width: 150px;
+    margin-top: 30px;
+    margin-right: 70px;
+}
+
+div nav ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+div nav ul li{
+    padding: 8px;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 10px;
+    border-style: none;
+    background: #90A955;
+}
+
+div nav ul li:hover{
+    background: #122A10;
+}
+
+div nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+div.FotoPerfil img{
+    float: left;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+div.Info h2{
+    float: left;
+    padding-top: 50px;
+    padding-left: 35px;
+}
+
+div.Info p{
+    float: center;
+    padding-top: 240px;
+    padding-left: 390px;
+    padding-bottom: 30px;
+}
+
+div.Preferencias{
+    float: center;
+    padding-top: 10px;
+    padding-left: 390px;
+}
+
+div.Direccion{
+    margin: 40px;
+    margin-top: 60px;
+    padding-bottom: 40px;
+}

@@ -1,0 +1,236 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.logo,.img_user{
+    max-width: 40px;
+}
+
+.img_user{
+    border-radius: 50%;
+}
+.navbar-nav{
+    margin-right: 50px ;
+}
+
+.nav-item{
+    padding: 5px;
+}
+.nav-item:hover{
+    background-color: #4F772D;
+    
+    
+}
+
+.nav-item:hover .nav-link{
+    color: white;
+}
+
+
+.dropdown-item:hover {
+    background-color: #4F772D;
+    color: white;
+}
+
+.navbar-expand-lg,.dropdown-toggle{
+    padding: 0px ;
+    
+}
+
+.navbar-expand-lg{
+    background-color: #ECF39E !important;
+}
+
+
+.nav-item.dropdown{
+    height: 50px;
+}
+
+.btn-cancelar{
+    background-color: #808080;
+    color:white;
+}
+
+.btn-cancelar:hover{
+    background-color: #5d5d5d;
+    color:white;
+}
+
+.btn-crearcuenta{
+    background-color: #31572C;
+    color:white
+}
+
+.btn-editar_perfil{
+    background-color: #31572C;
+    color:white
+}
+
+.btn-editar_perfil:hover{
+    background-color: #122A10;
+    color:white;
+}
+
+.btn-compartir_logros{
+    background-color: #31572C;
+    color:white
+}
+
+
+.btn-crearcuenta:hover{
+    background-color: #122A10;
+    color:white;
+}
+
+.btn-compartir_logros:hover{
+    background-color: #122A10;
+    color:white;
+}
+
+
+.link_pagina {
+    color: #90A955;
+    text-decoration: none;
+}
+
+.titulo_acerca{
+    background-color: #4F772D;
+    padding: 15px;
+    color:white;
+    font-size: 35px;
+}
+
+.titulo_fondo_verde{
+    background-color: #95A860;
+    padding: 15px;
+    color:white;
+    font-size: 35px;
+}
+
+.fondo_verde{
+    background-color: #ECF39E;
+}
+
+.fondo_blanco{
+    background-color: white;
+}
+
+.fondo_blanco p{
+    font-size: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.objetivo{
+    background-color: #4F772D;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.objetivo p{
+    font-size: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color:white;
+}
+
+.objetivoimg{
+    width: 70%;
+}
+
+.btn-conocemas{
+    background-color: white;
+    color:black;
+    border: none;
+}
+
+.btn-conocemas:hover{
+    background-color: #4F772D;
+    color:white;
+}
+
+.lista-opciones{
+    background-color: #95A860;
+}
+
+.btn-opciones{
+    background-color: #95A860;
+    padding: 20px;
+    max-width: 250px;  
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.btn-opciones:hover{
+    background-color: #587637;
+}
+
+.btn-opciones a{
+    color:white;
+    text-decoration: none;
+}
+
+.btn-opciones.activo{
+    background-color: #182913;
+}
+
+.titulo{
+    margin: 0px;
+}
+
+
+.footer{
+    background-color: #182913;
+}
+
+.enlaces{
+    color: #888888;
+}
+
+
+.footer h6, .derechos-reservados {
+    font-size: 13px;
+    color: #888888;
+}
+
+
+.footer-link {
+    color: #ffffff; 
+    text-decoration: none; 
+    transition: color 0.3s; 
+}
+
+.footer-link:hover {
+    color: #FFD700; 
+}
+
+.footer-link-inverso {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s; 
+}
+
+.footer-link-inverso:hover {
+    color: #ffffff; 
+}
+.anlace-moto{
+    color: #888888;
+}
+
+.anlace-moto:hover{
+    color: #ffffff; 
+}
+
+.footer p, .footer a{
+    font-size: 13px;
+}
+
+.footer .anlace-moto{
+    font-size: 14px;
+}
+
+.footer img {
+    max-width: 200px;
+    max-height: 100px;
+}
